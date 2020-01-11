@@ -1,2 +1,1 @@
-# resume
-Contains files of the current resume
+Contains files of the resume
