@@ -4,7 +4,7 @@
 \usepackage[english]{babel}
 \usepackage[document]{ragged2e}
 
-\usepackage[a4paper, margin=0.55in]{geometry}
+\usepackage[a4paper, margin=0.4in]{geometry}
 \title{Curriculum vitae}      
 \author{Sarthak Singhal}
 
@@ -28,30 +28,21 @@
 \makeatother
 
 \newcommand{\cvsection}[1]{
-  \vspace{.5mm}
-  {\fontsize{15.84pt}{1em}\strong{\sc #1}}
+  \vspace{0mm}
+  {\fontsize{10.84pt}{1em}\strong{\sc #1}}
   
-  \vspace{-2mm}
+  \vspace{-2.5mm}
   \hrulefill
-  \vspace{.1cm}
+  % \vspace{0mm}
 }
-
-\newcommand{\cvsectionedu}[1]{
-  \vspace{.5mm}
-  {\fontsize{15.84pt}{1em}\strong{\sc #1}}
-  \vspace{-2mm}
-  \hrulefill
-  \vspace{.2cm}
-}
-
 
 \newcommand{\specialcvsection}[1]{
 	 \vspace{.5mm}
   {\fontsize{15.84pt}{1em}\strong{\sc #1}}
   
-  \vspace{-2mm}
+  \vspace{-1mm}
   \hrulefill
-  \vspace{.2cm}
+  \vspace{.1cm}
 }
 
 \newenvironment{cvhonorsa}{\vspace{0mm}\begin{itemize}}{\end{itemize}}
@@ -59,23 +50,17 @@
 \newenvironment{cvitems}{\vspace{0mm}\begin{itemize}}{\end{itemize}}
 \newenvironment{cventries}{\vspace{0mm}}{}
 
-\newcommand{\cvhonora}[4]{\vspace{1mm}\item #1, #2}
-\newcommand{\cvhonor}[4]{\vspace{1mm}\item #1}
+\newcommand{\cvhonora}[4]{\vspace{0mm}\item \normalsize{#1, #2}}
+\newcommand{\cvhonor}[4]{\vspace{0mm}\item \normalsize{#1}}
 
 \newcommand{\cventry}[5]{
-\vspace{.5mm}
-  { \fontsize{10.845pt}{1em}\strong{#2}} \vspace{.5mm}\hfill \emph{\footnotesize #3} \\
-  {\footnotesize \large\emph{#1}\vspace{.5mm} \hfill #4}
-
-  #5
-  \vspace{2mm}
-}
-\newcommand{\cventryedu}[7]{
-\vspace{2mm}
-  { \fontsize{10.845pt}{1em}\strong{#1}} \vspace{.5mm}\hfill \emph{\footnotesize #3}
-  {\footnotesize \hfill \Large{#4}}
-
-  #5
+\vspace{0mm}
+  { \fontsize{9pt}{1em}\strong{#2}} \vspace{0mm}\hfill
+  {\footnotesize \small\emph{#3}\vspace{0mm} \hfill} \\
+  {\footnotesize \small\emph{#1}\vspace{0mm} \hfill}
+  {\footnotesize {#4}\vspace{0mm} \hfill}\\
+  \normalsize{#5}
+  % \vspace{2mm}z
 }
 
 \newcommand{\smallcventry}[6]{
@@ -100,40 +85,43 @@
 \hyphenpenalty 10000
 \exhyphenpenalty 10000
 
-{\fontsize{28pt}{1em}\textbf{\sc Sarthak Singhal}}
+{\fontsize{20pt}{1em}\textbf{\sc Sarthak Singhal}}
 \hfill
-{\Large {singhalsarthak2007@gmail.com}} \faEnvelope
+{\large \href{mailto::singhalsarthak2007@gmail.com}{singhalsarthak2007@gmail.com}} \faEnvelope \\
+\hfill
+{\large \href{mailto::ssinghal@iitk.ac.in}{ssinghal@iitk.ac.in}} \faEnvelope
 
-{\Large Third Year Undergraduate}
+{\large Senior Year Undergraduate}
 \hfill
-{\Large \href{https://sarthak2007.github.io}{sarthak2007.github.io\faHome}}\\
+{\large \href{http://sarthak2007.github.io}{sarthak2007.github.io \faHome}}\\
 
-{\Large Department of Computer Science and Engineering}
+{\large Department of Computer Science and Engineering}
 \hfill
-{\Large \href{https://github.com/sarthak2007}{sarthak2007\faGithub}} \textbar \ 
-{\Large \href{https://www.linkedin.com/in/sarthak2007/}{sarthak2007 \faLinkedin}} \\
+{\large \href{https://github.com/sarthak2007}{sarthak2007 \faGithub}} \textbar \ 
+{\large \href{https://www.linkedin.com/in/sarthak2007/}{sarthak2007 \faLinkedin}} \\
 
-{\Large Indian Institute of Technology, Kanpur}
+{\large Indian Institute of Technology Kanpur}
 \hfill
-{\Large +91-7427052933 \faMobile} \\
-\vspace{2mm}
-{\Large
+{\large +91-9198999289 \faMobile} \\
+{
 \input{sections/education.tex}}
 \begin{minipage}[t]{0.49\textwidth}
-  \vspace{1mm}
-  \input{sections/academic.tex}
-	\vspace{2mm}    
-  \input{sections/skills.tex}
-  \vspace{0mm}
-  \input{sections/mini.tex}
+  \vspace{3.2mm}
+  \input{sections/achievements.tex}
+	\vspace{2mm}
+  \input{sections/projects.tex}
+  \input{sections/coursework.tex}
+  
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.49\textwidth}
-  \vspace{1mm}
+  \vspace{3.2mm}
   \input{sections/experience.tex}
+  % \vspace{0mm}
+  \input{sections/skills.tex}
+  % \vspace{2mm}
+  \input{sections/misc.tex}
 \end{minipage}
-\vspace{0mm}
-\input{sections/coursework.tex}
 
 \endgroup
 \end{document}
